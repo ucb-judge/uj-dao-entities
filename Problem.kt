@@ -26,10 +26,10 @@ class Problem {
     @Column(name = "status")
     var status: Boolean = true;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "problem")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "problem")
     var problemTags: List<ProblemTag>? = null;
 
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "problem")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "problem")
     var admittedLanguages: List<AdmittedLanguage>? = null;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "problem")
