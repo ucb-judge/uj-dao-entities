@@ -23,6 +23,9 @@ class Problem {
     @Column(name = "max_memory")
     var maxMemory: Int = 0;
 
+    @Column(name = "is_public")
+    var isPublic: Boolean = true;
+
     @Column(name = "status")
     var status: Boolean = true;
 
